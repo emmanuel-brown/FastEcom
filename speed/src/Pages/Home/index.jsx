@@ -9,15 +9,14 @@ const Home = () =>{
     const [ cart, setCart, user, setUser ] = useContext(CartContext)
 
     useEffect(() =>{
-        axios.get('https://jsonplaceholder.typicode.com/users/')
+        axios.get('/user/collection')
             .then(res => setUsers(res.data))
     }, [])
 
-    console.log(users)
     const mapUsers = () => users.map(use => (
         <User 
             name={use.name}
-            email={use.email} 
+            points={use.points} 
             key={use.id}
             username={user.username}
         />

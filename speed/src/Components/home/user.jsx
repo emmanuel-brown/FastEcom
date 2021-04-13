@@ -3,7 +3,7 @@ import React from 'react'
 const User = props => {
     const { 
         name,
-        email,
+        points,
         // address,
         // phone,
         // website,
@@ -13,9 +13,7 @@ const User = props => {
     return(
         <div className="user">
             <p className="detes">{name}</p>
-            <p className="detes">{email}</p>
-            <p className="detes">{email}</p>
-            <p className="detes">{email}</p>
+            <p className="detes">Points: {points}</p>
         </div>
     )
 }
