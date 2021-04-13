@@ -1,0 +1,45 @@
+@import '../cssUtils.scss';
+
+
+ul{
+    list-style: none;
+    margin-left: 0;
+}
+li{
+
+}
+#navbar{
+    font-family: $fancy;
+    position: absolute;
+    width: 100%;
+    background-color: $pine;
+    top: 0;
+    left: 0;
+    text-align: center;
+    .header{
+        font-size: 1.3em;
+    }
+    .sites{
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2em;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #navbar{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header{
+            margin-left: 30px;
+        }
+        .sites{
+            &-link{
+                padding: 3px .5em;
+            }
+        }
+    }
+}

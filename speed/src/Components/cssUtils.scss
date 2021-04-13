@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Pacifico&display=swap');
+
+
+h1{
+    margin: 0;
+};
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.welcome{
+    text-align: center;
+    font-weight: bolder;
+    .body{
+        font-size: 1.4em;
+    }
+}
+
+$main: 'Architects Daughter', cursive;
+$fancy: 'Pacifico', cursive;
+
+$dark: #233D4D;
+$white: #ffffff;
+$orange: #FE7F2D;
+$yellow: #FCCA46;
+$olivine: #A1C181;
+$pine: #A1C181;
+
+body{
+    color: $dark;
+}
+
+#main{
+    font-family: $main;
+    margin-top: 80px;
+}

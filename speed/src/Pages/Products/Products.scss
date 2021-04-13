@@ -1,0 +1,101 @@
+@import '../../Components/cssUtils.scss';
+
+#products{
+    font-family: $main;
+    margin-top: 80px;
+    font-weight: bolder;
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 1.4em;
+        margin: 10px 10%;
+        .prod{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            overflow: hidden;
+            border: 3px $orange solid;
+            width: 230px;
+            height: 300px;
+            .imgContainer {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 75%;
+                }
+            }
+            &-name{
+                
+            }
+        }
+    }
+    .cart {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.8em;
+    }
+}
+
+#cart{
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    width: 80%;
+    background-color: $dark;
+    height: 100vh;
+    color: $orange;
+    font-family: $main;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    .imgContainer{
+        display: none;
+    }
+    .prod{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        border-bottom: $white solid 2px;
+        padding-left: 10px;
+        &-name{
+            font-size: 1.5em;
+        }
+    }
+    .buy{
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        text-align: center;
+        height: 100px;
+        background-color: $dark;
+        width: 100%;
+        transition: 1s ease all;
+        &-button {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%)
+        }
+        &:hover{
+            background-color: $white;
+            color: $dark;
+        }
+    }
+    .total{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 1.5em;
+    }
+}

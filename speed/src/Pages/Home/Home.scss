@@ -1,0 +1,48 @@
+@import '../../Components/cssUtils.scss';
+
+
+#home{
+    font-family: $main;
+    margin-top: 80px;
+    .welcome{
+        text-align: center;
+        font-weight: bolder;
+        .body{
+            font-size: 1.4em;
+        }
+    }
+    .users{
+        margin: 10px 10%;
+        .user{
+            display: grid;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            grid-template-columns: 1fr 1fr;
+            border: 2px $yellow solid;
+            border: {
+                top-left-radius: 5% 18%;
+                top-right-radius: 5% 18%;
+                bottom-left-radius: 5% 18%;
+                bottom-right-radius: 5% 18%;
+            }
+            background-color: $dark;
+            color: $orange;
+            margin-bottom: 20px;
+            padding: 1px 10px
+        }
+        .detes{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #home{
+        margin-top: 43px;
+    }
+}
