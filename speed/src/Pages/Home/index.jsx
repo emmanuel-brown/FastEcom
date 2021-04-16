@@ -13,15 +13,20 @@ const Home = () =>{
             .then(res => setUsers(res.data))
     }, [])
 
-    const mapUsers = () => users.map(use => (
+    const changeUser = index =>{
+        setUser(users[index])
+    }
+    const mapUsers = () => users.map((use, i) => (
         <User 
             name={use.name}
             points={use.points} 
             key={use.id}
+            i={i}
+            clicked={changeUser}
             username={user.username}
         />
     ))
-        console.log(user)
+    
     return(
         <main id="home">
             <div className="welcome">

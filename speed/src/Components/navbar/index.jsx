@@ -21,7 +21,7 @@ const Navbar = () =>{
                 <Link className="sites-link" to='/products'>Products</Link>
             </div>
             <section className="user">
-                {user.name}
+                User: {user.name}
             </section>
         </nav>
     )

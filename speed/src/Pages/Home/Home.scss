@@ -16,16 +16,17 @@
         .user{
             display: grid;
             justify-content: center;
+            max-width: 700px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             grid-template-columns: 1fr 1fr;
             border: 2px $yellow solid;
             border: {
-                top-left-radius: 5% 18%;
-                top-right-radius: 5% 18%;
-                bottom-left-radius: 5% 18%;
-                bottom-right-radius: 5% 18%;
+                top-left-radius: 28px 47px;
+                top-right-radius: 28px 47px;
+                bottom-left-radius: 14px 14px;
+                bottom-right-radius: 14px 14px;
             }
             background-color: $dark;
             color: $orange;
@@ -33,6 +34,8 @@
             padding: 1px 10px
         }
         .detes{
+            font-size: 1.5em;
+            text-align: center;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -43,6 +46,14 @@
 
 @media only screen and (min-width: 900px) {
     #home{
-        margin-top: 43px;
+        margin-top: 55px;
+        .users{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            .user{
+                width: 600px;
+            }
+        }
     }
 }
