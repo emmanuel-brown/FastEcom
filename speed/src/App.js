@@ -13,6 +13,7 @@ import Navbar from './Components/navbar'
 import Home from './Pages/Home'
 import Products from './Pages/Products'
 import NotFound from './Pages/NotFound'
+import PurchaseHistory from './Pages/PurchaseHistory';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/products' component={Products} />
+        <Route exact path='/transactions' component={PurchaseHistory} />
         <Route exact path="/404" component={ NotFound } />
         <Redirect to="/404" />
       </Switch>

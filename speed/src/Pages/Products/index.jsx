@@ -78,31 +78,32 @@ const Products = () =>{
         try{
             let points = 0 //This is where point are calculated
             if(total > 100) {
-                points = 2(total - 100) + 50
+                points = (2*(total - 100)) + 50
             } else if(total > 50){
                 points = total - 50
             }
             user.points = points + user.points
             setUser(user)
-            console.log("points: ", points)
+            console.log("user: ", user)
             const obj = {
                 products: cart,
                 username: user.username,
                 pointsEarned: points,
                 total
             }
-            axios.put('/user/edit', user)
-                .then(res => console.log(res.data))
+            await axios.put('/user/edit', user)
+                .then(res => setUser(res.data))
                 .catch(() => console.log("was unable to send user data"))
             
-            axios.post('/transactions', obj)
+            await axios.post('/transactions', obj)
                 .then(res => console.log(res))
                 .catch(e => console.log(e))
             setCart([])
             setShowCart(false)
+            
         }
-        catch{
-            console.log("something went wrong")
+        catch (e){
+            console.log("something went wrong", e)
         }
     }
 

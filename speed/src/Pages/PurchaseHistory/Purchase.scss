@@ -1,0 +1,53 @@
+@import '../../Components/cssUtils.scss';
+
+#transactions{
+    font-family: $main;
+    margin-top: 113px;
+    font-weight: bolder;
+    text-align: center;
+    .purchases{
+        margin: 10px 10%;
+        .purchase{
+            display: grid;
+            justify-content: center;
+            max-width: 700px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            grid-template-columns: 1fr 1fr;
+            border: 2px $yellow solid;
+            border: {
+                top-left-radius: 28px 47px;
+                top-right-radius: 28px 47px;
+                bottom-left-radius: 14px 14px;
+                bottom-right-radius: 14px 14px;
+            }
+            background-color: $dark;
+            color: $orange;
+            margin-bottom: 20px;
+            padding: 1px 10px
+        }
+        .detes{
+            font-size: 1.5em;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #transactions{
+        margin-top: 55px;
+        .purchases{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            .purchase{
+                width: 700px;
+            }
+        }
+    }
+}

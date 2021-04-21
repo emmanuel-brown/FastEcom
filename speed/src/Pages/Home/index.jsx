@@ -16,11 +16,12 @@ const Home = () =>{
     const changeUser = index =>{
         setUser(users[index])
     }
+
     const mapUsers = () => users.map((use, i) => (
         <User 
             name={use.name}
             points={use.points} 
-            key={use.id}
+            key={use.username}
             i={i}
             clicked={changeUser}
             username={user.username}

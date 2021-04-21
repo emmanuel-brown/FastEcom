@@ -44,9 +44,12 @@ CartRouter.post('/', async (req, res) =>{
 //     }
 // })
 
-CartRouter.get('/', async (req, res) =>{
-    try{
-        cart = await Cart.find({ user: req.username })
+CartRouter.post('/user', async (req, res) => {
+    const { username } = req.body
+    console.log(req.body)
+    try {
+        cart = await Cart.find({ username })
+        console.log("body: ", username)
         res.status(200).send(cart)
     } catch(e) {
         res.status(400).send("Getting cart failed")

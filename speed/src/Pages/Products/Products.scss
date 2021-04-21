@@ -2,7 +2,7 @@
 
 #products{
     font-family: $main;
-    margin-top: 80px;
+    margin-top: 113px;
     font-weight: bolder;
     .products{
         display: grid;
@@ -109,6 +109,7 @@
 
 @media only screen and (min-width: 900px) {
     #products{
+        margin-top: 55px;
         .cart{
             top: 12px;
             right: 10%;
