@@ -76,18 +76,19 @@ const Products = () =>{
 
     const purchase = async () => {
         try{
-            let points = 0
+            let points = 0 //This is where point are calculated
             if(total > 100) {
-                points = (total * 3) - 250
+                points = 2(total - 100) + 50
             } else if(total > 50){
                 points = total - 50
             }
             user.points = points + user.points
             setUser(user)
-
+            console.log("points: ", points)
             const obj = {
                 products: cart,
                 username: user.username,
+                pointsEarned: points,
                 total
             }
             axios.put('/user/edit', user)

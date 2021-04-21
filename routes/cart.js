@@ -7,11 +7,12 @@ const toArray = prop => typeof prop === 'string' ? [ prop ] : prop
 
 
 CartRouter.post('/', async (req, res) =>{
-    const { products, username, total } = req.body //validate products
+    const { products, username, total, pointsEarned } = req.body //validate products
     // products = toArray(products)
     let preCart = { 
         username,
         products,
+        pointsEarned,
         total
     }
 

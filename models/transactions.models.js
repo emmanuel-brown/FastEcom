@@ -15,6 +15,9 @@ const TransactionSchema = mongoose.Schema({
         type: Number,
         require: true
     },
+    pointsEarned: {
+        type: Number,
+    },
     status:{
         type: String,
     },
